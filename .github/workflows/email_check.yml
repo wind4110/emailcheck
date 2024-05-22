@@ -11,10 +11,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3  # 使用Node.js 20版本
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3  # 使用Node.js 20版本
       with:
         python-version: '3.11.7'  # 设置所需的Python版本
 
@@ -24,4 +24,4 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     - name: Run email_check script
-      run: python email_cs.py
+      run: python email_check.py
