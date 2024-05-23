@@ -3,11 +3,12 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
+import os
 
 imap_server = "imap.zju.edu.cn"  # Zju邮箱smtp服务器
 smtp_server = "smtp.zju.edu.cn"
 username = "3210100658@zju.edu.cn"  # 发件人邮箱
-password = "Q6GSkesgcngZvKy8"  # 专用密码
+password = os.getenv('EMAIL_PASSWORD')  # 专用密码
 receiver = ["wind4110@qq.com"]
 
 mail_title = "教育邮箱新邮件通知"  # 邮件标题
